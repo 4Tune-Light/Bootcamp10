@@ -33,7 +33,7 @@
 		exit();
 	}
 
-	$query = "SELECT users.name, skills.name FROM users INNER JOIN skills ON users.id = skills.user_id";
+	$query = "SELECT * FROM users";
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
@@ -42,16 +42,22 @@
 		<div>
 			<div>
 				<div>
-					<?php echo $row[0]; ?>
+					<?php echo $row[1]; ?>
 				</div>
 				<div>
-					<?php echo $row[1]; ?>
+					<?php $query2 = "SELECT name FROM skills WHERE user_id = $row[0]";
+						  $result2 = mysqli_query($conn, $query2); 
+						  while ($row2 = mysqli_fetch_row($result2)) {
+						  		echo "$row2[0], ";
+						  }
+					?>
 				</div>
 			</div>
 			<div>
 				<form method="post" action="6-S.php">
 					<div>
-						<input type="text" name="name" placeholder="Tambahkan Skill">
+						<input type="text" name="skill" placeholder="Tambahkan Skill">
+						<input type="hidden" name="user_id" value="<?php echo $row[0]; ?>">
 					</div>
 					<div>
 						<input type="submit" name="submit" value="Add">
