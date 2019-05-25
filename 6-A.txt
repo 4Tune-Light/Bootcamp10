@@ -1,0 +1,7 @@
+SELECT
+	users.name,
+	COUNT(skills.user_id)
+FROM users
+LEFT JOIN skills
+ON users.id = skills.user_id
+GROUP BY skills.user_id;
