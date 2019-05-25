@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td><label>Hobi</label></td>
-				<td><input class="text" type="text" name="hobbies" placeholder="Masukkan hobi anda disini" required></td>
+				<td><input class="text" type="text" name="hobbies" placeholder="Masukkan hobi anda disini" required> <sub>Gunakan tanda Koma(,) untuk memisahkan hobi</sub></td>
 			</tr>
 			<tr>
 				<td><label>Status</label></td>
