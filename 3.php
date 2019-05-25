@@ -10,6 +10,10 @@
 		input{
 			padding: 7px;
 		}
+
+		td{
+			padding: 10px;
+		}
 		
 		input.text{
 			width: 250px;
@@ -22,9 +26,13 @@
 </head>
 <body>
 	<form method="post" action="3.php">
-		<label>Masukkan Huruf</label>
-		<input type="input" name="letter">
-		<input type="submit" name="submit"><br><br>
+		<table>
+			<tr>
+				<td><label>Kalimat</label></td>
+				<td><input type="input" name="letter" placeholder="Masukkan Kalimat Disini"></td>
+				<td><input type="submit" name="submit" style="margin-top: 15px;"><br><br></td>
+			</tr>
+		</table>
 		
 	</form>
 

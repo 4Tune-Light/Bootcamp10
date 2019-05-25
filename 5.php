@@ -28,19 +28,19 @@
 	<form method="post" action="5.php">
 		<table>
 			<tr>
-				<td><label>Masukkan Kata</label></td>
-				<td><input type="input" name="kata"><br></td>
+				<td><label>MKata</label></td>
+				<td><input type="input" name="kata" placeholder="Masukkan Kata Disini"></td>
 			</tr>
 			<tr>
 				<td><label>Huruf Diganti</label></td>
-				<td><input type="input" name="diganti"><br></td>
+				<td><input type="input" name="diganti" placeholder="Masukkan Huruf Diganti Disini"></td>
 			</tr>
 			<tr>
 				<td><label>Huruf Pengganti</label></td>
-				<td><input type="input" name="pengganti"><br></td>
+				<td><input type="input" name="pengganti" placeholder="Masukkan Huruf Pengganti Disini"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" name="submit"><br><br></td>
+				<td colspan="2"><input type="submit" name="submit"></td>
 			</tr>
 		</table>
 	</form>

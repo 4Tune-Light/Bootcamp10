@@ -7,6 +7,10 @@
 			font-weight: 600;
 		}
 
+		td{
+			padding: 10px;
+		}
+
 		input{
 			padding: 7px;
 		}
@@ -22,11 +26,15 @@
 </head>
 <body>
 	<form method="post" action="4.php">
-		<label>Masukkan Lebar Matriks</label>
-		<input type="input" name="length">
-		<input type="submit" name="submit"><br><br>
-		
+		<table>
+			<tr>
+				<td><label>Lebar Matriks</label></td>
+				<td><input type="input" name="length" placeholder="Masukkan Lebar Matriks Disini"></td>
+				<td><input type="submit" name="submit"></td>
+			</tr>
+		</table>
 	</form>
+	<br>
 
 </body>
 </html>

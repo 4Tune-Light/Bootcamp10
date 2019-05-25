@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Biodata</title>
+	<title>Soal 1</title>
 
 	<style type="text/css">
 		label{
@@ -66,6 +66,7 @@
 			</tr>
 		</table>
 	</form>
+	<br>
 
 	<?php
 	function process(){

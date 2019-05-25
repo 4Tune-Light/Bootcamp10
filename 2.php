@@ -10,6 +10,10 @@
 		input{
 			padding: 7px;
 		}
+
+		td{
+			padding: 10px;
+		}
 		
 		input.text{
 			width: 250px;
@@ -18,12 +22,17 @@
 </head>
 <body>
 	<form method="post" action="2.php">
-		<label>Tanggal ditengah</label>
-		<input type="date" name="start">
-		<input type="date" name="finish">
+		<table>
+			<tr>
+				<td><label>Tanggal ditengah</label></td>
+				<td><input type="date" name="start"></td>
+				<td><input type="date" name="finish"></td>
 
-		<input type="submit" name="submit"><br><br>
+				<td><input type="submit" name="submit"></td>
+			</tr>
+		</table>
 	</form>
+
 
 </body>
 </html>
@@ -42,6 +51,7 @@ function date_range($first, $last, $step = '+1 day', $output_format = 'd-m-Y' ) 
 
     $i = 0;
     $len = count($dates);
+    echo "<h3>";
     foreach ($dates as $key => $value) {
     	if ($i != $len -1) {
     		echo "'$value', ";
@@ -49,6 +59,7 @@ function date_range($first, $last, $step = '+1 day', $output_format = 'd-m-Y' ) 
     		echo "'$value'";
     	} $i++;
     }
+    echo "</h3>";
 }
 
 if (isset($_POST['submit'])) {
