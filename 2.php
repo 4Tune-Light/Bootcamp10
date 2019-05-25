@@ -40,10 +40,10 @@
 <?php
 function date_range($first, $last, $step = '+1 day', $output_format = 'd-m-Y' ) {
     $dates = array();
-    $current = strtotime($first . $step);
+    $current = strtotime($first);
     $last = strtotime($last);
 
-    while( $current < $last) {
+    while( $current <= $last) {
 
         $dates[] = date($output_format, $current);
         $current =  strtotime($step, $current);
@@ -53,7 +53,7 @@ function date_range($first, $last, $step = '+1 day', $output_format = 'd-m-Y' ) 
     $len = count($dates);
     echo "<h3>";
     foreach ($dates as $key => $value) {
-    	if ($i != $len -1) {
+    	if ($i != $len) {
     		echo "'$value', ";
     	} else {
     		echo "'$value'";
